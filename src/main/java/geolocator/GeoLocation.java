@@ -1,5 +1,8 @@
 package geolocator;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 public class GeoLocation {
 
     private String ip;
@@ -100,6 +103,10 @@ public class GeoLocation {
 
     public void setMetroCode(String metroCode) {
         this.metroCode = metroCode;
+    }
+
+    public String toString() {
+        return ReflectionToStringBuilder.toString(this, ToStringStyle.MULTI_LINE_STYLE);
     }
 
 }
