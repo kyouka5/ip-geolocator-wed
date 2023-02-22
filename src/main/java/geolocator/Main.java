@@ -7,6 +7,7 @@ public class Main {
             System.err.printf("Usage: java %s [ipOrHostName]%n", Main.class.getName());
             System.exit(1);
         }
+        System.out.println();
         GeoLocator geoLocator = GeoLocator.newInstance();
         GeoLocation geoLocation = args.length == 0 ? geoLocator.getGeoLocation() : geoLocator.getGeoLocation(args[0]);
         System.out.println(geoLocation.toString());
